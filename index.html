@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-        <title>AguaClub</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>AguaClub</title>
 
-        <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
-    </head>
-    <body>
-        <a href="javascript:;" class="weui-btn weui-btn_primary">立即报名</a>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
+  </head>
+  <body>
+    <div class="weui-tab">
+      <div class="weui-tab__panel">
+        <div>活动页面</div> 
+        <div style="display: none;">我的页面</div> 
+      </div>
+
+      <div class="weui-tabbar">
+        <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+          <p class="weui-tabbar__label">活动</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item">
+          <p class="weui-tabbar__label">我的</p>
+        </a>
+      </div>
+    </div>
     </body>
 </html>
