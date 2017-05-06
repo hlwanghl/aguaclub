@@ -6,22 +6,35 @@
     <title>AguaClub</title>
 
     <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
   </head>
   <body>
-    <div class="weui-tab">
-      <div class="weui-tab__panel">
-        <div>活动页面</div> 
-        <div style="display: none;">我的页面</div> 
-      </div>
+    <div class="root-container">
+      <div class="weui-tab">
+        <div class="weui-tab__panel">
+          <div>活动页面</div> 
+          <div class="hidden">我的页面</div> 
+        </div>
 
-      <div class="weui-tabbar">
-        <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
-          <p class="weui-tabbar__label">活动</p>
-        </a>
-        <a href="javascript:;" class="weui-tabbar__item">
-          <p class="weui-tabbar__label">我的</p>
-        </a>
+        <div class="weui-tabbar">
+          <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+            <p class="weui-tabbar__label">活动</p>
+          </a>
+          <a href="javascript:;" class="weui-tabbar__item">
+            <p class="weui-tabbar__label">我的</p>
+          </a>
+        </div>
       </div>
     </div>
-    </body>
+    <script type="text/javascript" src="lib/zepto.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('.weui-tabbar__item').on('click', function() {
+          $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+          var index = $(this).index();
+          $('.weui-tab__panel div').eq(index).show().siblings().hide();
+        });
+      });
+    </script>
+  </body>
 </html>
