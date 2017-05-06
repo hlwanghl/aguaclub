@@ -42,7 +42,7 @@
         $('.weui-tabbar__item').on('click', function() {
           $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
           var index = $(this).index();
-          $('.weui-tab__panel div').eq(index).show().siblings().hide();
+          $('.weui-tab__panel > div').eq(index).show().siblings().hide();
         });
       });
     </script>
